@@ -15,7 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.ArrayList;
 import java.util.List;
 
-//import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class TrigolosAlexTest1 {
 
@@ -70,17 +71,19 @@ public class TrigolosAlexTest1 {
         // Without Selenium
         List<String> stringListQueryLukoshenko2019_04_25 = getStringListQueryLukoshenko2019_04_25();
 
+
+
         for(int i = 0; i < listStringLukoshenkoSelenium.size() ; i++){
-            System.out.println("compare " + (i+1));
-            Assert.assertEquals(stringListQueryLukoshenko2019_04_25.get(i), listStringLukoshenkoSelenium.get(i).getText());
+            System.out.println("compare " + (i+1)  );
+            assertEquals(stringListQueryLukoshenko2019_04_25.get(i), listStringLukoshenkoSelenium.get(i).getText());
+
         }
-
-
-        Assert.assertEquals(13, listStringLukoshenkoSelenium.size());
+//        Assert.assertEquals(13, listStringLukoshenkoSelenium.size());
     }
 
     List<String> getStringListQueryLukoshenko2019_04_25(){
 
+        // Get manually
         List<String> stringListQueryLukoshenko2019_04_25 = new ArrayList<>();
         stringListQueryLukoshenko2019_04_25.add("Лукашенко, Александр Григорьевич — Википедия");
         stringListQueryLukoshenko2019_04_25.add("Интернет-портал Президента Республики Беларусь");
