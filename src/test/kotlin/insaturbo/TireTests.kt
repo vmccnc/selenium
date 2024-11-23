@@ -1,4 +1,4 @@
-package com.selenium.dm
+package com.selenium.dm.insaturbo
 
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
